@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2800BADF1437547D00DF68C0 /* MerryIcon24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 2800BADE1437547D00DF68C0 /* MerryIcon24x24.png */; };
+		2811CC68143718DA00F0D15E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C66142DA1B300AED3C4 /* main.m */; };
+		2811CC69143718DA00F0D15E /* snapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C6D142DA1B300AED3C4 /* snapAppDelegate.m */; };
+		2811CC6A143718DA00F0D15E /* MerryCaptureService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C7F142DA39400AED3C4 /* MerryCaptureService.m */; };
+		2811CC6B143718DA00F0D15E /* MerryUploadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C82142DA6E300AED3C4 /* MerryUploadService.m */; };
+		2811CC6C143718DA00F0D15E /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CB9142DBC1800AED3C4 /* ASIInputStream.m */; };
+		2811CC6D143718DA00F0D15E /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CBB142DBC1800AED3C4 /* ASIFormDataRequest.m */; };
+		2811CC6E143718DA00F0D15E /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CBD142DBC1900AED3C4 /* ASIHTTPRequest.m */; };
+		2811CC6F143718DA00F0D15E /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CBF142DBC1900AED3C4 /* ASINetworkQueue.m */; };
+		2811CC70143718DA00F0D15E /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CC2142DBC1900AED3C4 /* ASIDownloadCache.m */; };
+		2811CC71143718DA00F0D15E /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CC4142DBC1900AED3C4 /* ASIDataCompressor.m */; };
+		2811CC72143718DA00F0D15E /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87CC6142DBC1900AED3C4 /* ASIDataDecompressor.m */; };
+		2811CC73143718DA00F0D15E /* MerryEmptyWindowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28898816142E949300CC0757 /* MerryEmptyWindowService.m */; };
+		2811CC74143718DA00F0D15E /* MerryEmptyWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287348A9142EA71A00465B45 /* MerryEmptyWindowView.m */; };
+		2811CC75143718DA00F0D15E /* MerryNSTaskCaptureService.m in Sources */ = {isa = PBXBuildFile; fileRef = 285FA3FB1435DA8700E2668D /* MerryNSTaskCaptureService.m */; };
+		2811CC76143718DA00F0D15E /* JFHotkeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 285FA3FE1435EB2C00E2668D /* JFHotkeyManager.m */; };
+		2811CC77143718DA00F0D15E /* MerryAuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28098C0A1436998300DBF059 /* MerryAuthWindowController.m */; };
+		2811CC78143718DA00F0D15E /* MerryAuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28098C1A14369EF800DBF059 /* MerryAuthenticationService.m */; };
+		2811CC79143718DA00F0D15E /* MerryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 28098C1D1436AA4D00DBF059 /* MerryUtil.m */; };
+		2811CC7A143718DA00F0D15E /* OARequestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 28098C271436C6C500DBF059 /* OARequestHeader.m */; };
+		2811CC7B143718DA00F0D15E /* MerryGrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28098C36143708CC00DBF059 /* MerryGrowlDelegate.m */; };
+		2811CC7D143718DA00F0D15E /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28098C3C1437160500DBF059 /* libz.1.2.3.dylib */; };
+		2811CC7E143718DA00F0D15E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28098BFF1436948200DBF059 /* WebKit.framework */; };
+		2811CC7F143718DA00F0D15E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285FA4051435ECA900E2668D /* Carbon.framework */; };
+		2811CC80143718DA00F0D15E /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28098BE9143693EF00DBF059 /* OAuthConsumer.framework */; };
+		2811CC81143718DA00F0D15E /* YAJL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28098BEA143693EF00DBF059 /* YAJL.framework */; };
+		2811CC82143718DA00F0D15E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287348AC142EABC200465B45 /* QuartzCore.framework */; };
+		2811CC83143718DA00F0D15E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C87CD0142DBC6600AED3C4 /* SystemConfiguration.framework */; };
+		2811CC84143718DA00F0D15E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C87CCE142DBC5F00AED3C4 /* CoreServices.framework */; };
+		2811CC85143718DA00F0D15E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C87C5A142DA1B300AED3C4 /* Cocoa.framework */; };
+		2811CC86143718DA00F0D15E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28098C2E143706A600DBF059 /* Growl.framework */; };
+		2811CC88143718DA00F0D15E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28C87C63142DA1B300AED3C4 /* InfoPlist.strings */; };
+		2811CC89143718DA00F0D15E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 28C87C69142DA1B300AED3C4 /* Credits.rtf */; };
+		2811CC8A143718DA00F0D15E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C87C6F142DA1B300AED3C4 /* MainMenu.xib */; };
+		2811CC8B143718DA00F0D15E /* MerrySnapAuthWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28098C231436B0D400DBF059 /* MerrySnapAuthWindow.xib */; };
+		2811CC8C143718DA00F0D15E /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 28098C321437086800DBF059 /* Growl Registration Ticket.growlRegDict */; };
+		2811CC8D143718DA00F0D15E /* MerryNightmare.icns in Resources */ = {isa = PBXBuildFile; fileRef = 28098C38143712A400DBF059 /* MerryNightmare.icns */; };
+		2811CC90143718DA00F0D15E /* YAJL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28098BEA143693EF00DBF059 /* YAJL.framework */; };
+		2811CC91143718DA00F0D15E /* OAuthConsumer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28098BE9143693EF00DBF059 /* OAuthConsumer.framework */; };
+		2811CC92143718DA00F0D15E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28098C2E143706A600DBF059 /* Growl.framework */; };
+		2811CC9B1437205B00F0D15E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2811CC991437205300F0D15E /* AppKit.framework */; };
+		289220D8143743C100774AA7 /* MerryStatusBarMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289220D7143743C100774AA7 /* MerryStatusBarMenuController.m */; };
+		289220DA143743F500774AA7 /* MerryStatusBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289220D9143743F500774AA7 /* MerryStatusBarMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2811CC8E143718DA00F0D15E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2811CC90143718DA00F0D15E /* YAJL.framework in CopyFiles */,
+				2811CC91143718DA00F0D15E /* OAuthConsumer.framework in CopyFiles */,
+				2811CC92143718DA00F0D15E /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2800BADE1437547D00DF68C0 /* MerryIcon24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MerryIcon24x24.png; sourceTree = "<group>"; };
+		28098BE9143693EF00DBF059 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthConsumer.framework; path = Frameworks/OAuthConsumer.framework; sourceTree = "<group>"; };
+		28098BEA143693EF00DBF059 /* YAJL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJL.framework; path = Frameworks/YAJL.framework; sourceTree = "<group>"; };
+		28098BFF1436948200DBF059 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		28098C0A1436998300DBF059 /* MerryAuthWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryAuthWindowController.m; sourceTree = "<group>"; };
+		28098C0C1436999300DBF059 /* MerryAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryAuthWindowController.h; sourceTree = "<group>"; };
+		28098C1814369D7400DBF059 /* MerryCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryCredentials.h; sourceTree = "<group>"; };
+		28098C1914369EF800DBF059 /* MerryAuthenticationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryAuthenticationService.h; sourceTree = "<group>"; };
+		28098C1A14369EF800DBF059 /* MerryAuthenticationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryAuthenticationService.m; sourceTree = "<group>"; };
+		28098C1C1436AA4D00DBF059 /* MerryUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryUtil.h; sourceTree = "<group>"; };
+		28098C1D1436AA4D00DBF059 /* MerryUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryUtil.m; sourceTree = "<group>"; };
+		28098C231436B0D400DBF059 /* MerrySnapAuthWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerrySnapAuthWindow.xib; sourceTree = "<group>"; };
+		28098C261436C6C500DBF059 /* OARequestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestHeader.h; sourceTree = "<group>"; };
+		28098C271436C6C500DBF059 /* OARequestHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestHeader.m; sourceTree = "<group>"; };
+		28098C2E143706A600DBF059 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Frameworks/Growl.framework; sourceTree = "<group>"; };
+		28098C321437086800DBF059 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		28098C35143708CC00DBF059 /* MerryGrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryGrowlDelegate.h; sourceTree = "<group>"; };
+		28098C36143708CC00DBF059 /* MerryGrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryGrowlDelegate.m; sourceTree = "<group>"; };
+		28098C38143712A400DBF059 /* MerryNightmare.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MerryNightmare.icns; sourceTree = "<group>"; };
+		28098C3C1437160500DBF059 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		2811CC96143718DA00F0D15E /* MerrySnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerrySnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2811CC991437205300F0D15E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		285FA3FA1435DA8700E2668D /* MerryNSTaskCaptureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryNSTaskCaptureService.h; sourceTree = "<group>"; };
+		285FA3FB1435DA8700E2668D /* MerryNSTaskCaptureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryNSTaskCaptureService.m; sourceTree = "<group>"; };
+		285FA3FD1435EB2C00E2668D /* JFHotkeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFHotkeyManager.h; sourceTree = "<group>"; };
+		285FA3FE1435EB2C00E2668D /* JFHotkeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFHotkeyManager.m; sourceTree = "<group>"; };
+		285FA4051435ECA900E2668D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		287348A8142EA71A00465B45 /* MerryEmptyWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryEmptyWindowView.h; sourceTree = "<group>"; };
+		287348A9142EA71A00465B45 /* MerryEmptyWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryEmptyWindowView.m; sourceTree = "<group>"; };
+		287348AC142EABC200465B45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		28898815142E949300CC0757 /* MerryEmptyWindowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryEmptyWindowService.h; sourceTree = "<group>"; };
+		28898816142E949300CC0757 /* MerryEmptyWindowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryEmptyWindowService.m; sourceTree = "<group>"; };
+		289220D6143743C100774AA7 /* MerryStatusBarMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryStatusBarMenuController.h; sourceTree = "<group>"; };
+		289220D7143743C100774AA7 /* MerryStatusBarMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryStatusBarMenuController.m; sourceTree = "<group>"; };
+		289220D9143743F500774AA7 /* MerryStatusBarMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerryStatusBarMenu.xib; sourceTree = "<group>"; };
+		28C87C5A142DA1B300AED3C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		28C87C5D142DA1B300AED3C4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		28C87C5E142DA1B300AED3C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		28C87C5F142DA1B300AED3C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28C87C62142DA1B300AED3C4 /* MerrySnap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MerrySnap-Info.plist"; path = "snap/MerrySnap-Info.plist"; sourceTree = "<group>"; };
+		28C87C64142DA1B300AED3C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		28C87C66142DA1B300AED3C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28C87C68142DA1B300AED3C4 /* MerrySnap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MerrySnap-Prefix.pch"; sourceTree = "<group>"; };
+		28C87C6A142DA1B300AED3C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		28C87C6C142DA1B300AED3C4 /* snapAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = snapAppDelegate.h; sourceTree = "<group>"; };
+		28C87C6D142DA1B300AED3C4 /* snapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = snapAppDelegate.m; sourceTree = "<group>"; };
+		28C87C70142DA1B300AED3C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		28C87C7E142DA39400AED3C4 /* MerryCaptureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryCaptureService.h; sourceTree = "<group>"; };
+		28C87C7F142DA39400AED3C4 /* MerryCaptureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryCaptureService.m; sourceTree = "<group>"; };
+		28C87C81142DA6E300AED3C4 /* MerryUploadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryUploadService.h; sourceTree = "<group>"; };
+		28C87C82142DA6E300AED3C4 /* MerryUploadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryUploadService.m; sourceTree = "<group>"; };
+		28C87CB5142DBC1000AED3C4 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		28C87CB6142DBC1800AED3C4 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		28C87CB7142DBC1800AED3C4 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		28C87CB8142DBC1800AED3C4 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		28C87CB9142DBC1800AED3C4 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		28C87CBA142DBC1800AED3C4 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		28C87CBB142DBC1800AED3C4 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		28C87CBC142DBC1800AED3C4 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		28C87CBD142DBC1900AED3C4 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		28C87CBE142DBC1900AED3C4 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		28C87CBF142DBC1900AED3C4 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		28C87CC0142DBC1900AED3C4 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		28C87CC1142DBC1900AED3C4 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		28C87CC2142DBC1900AED3C4 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		28C87CC3142DBC1900AED3C4 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		28C87CC4142DBC1900AED3C4 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		28C87CC5142DBC1900AED3C4 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		28C87CC6142DBC1900AED3C4 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		28C87CCE142DBC5F00AED3C4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		28C87CD0142DBC6600AED3C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2811CC7C143718DA00F0D15E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2811CC9B1437205B00F0D15E /* AppKit.framework in Frameworks */,
+				2811CC7D143718DA00F0D15E /* libz.1.2.3.dylib in Frameworks */,
+				2811CC7E143718DA00F0D15E /* WebKit.framework in Frameworks */,
+				2811CC7F143718DA00F0D15E /* Carbon.framework in Frameworks */,
+				2811CC80143718DA00F0D15E /* OAuthConsumer.framework in Frameworks */,
+				2811CC81143718DA00F0D15E /* YAJL.framework in Frameworks */,
+				2811CC82143718DA00F0D15E /* QuartzCore.framework in Frameworks */,
+				2811CC83143718DA00F0D15E /* SystemConfiguration.framework in Frameworks */,
+				2811CC84143718DA00F0D15E /* CoreServices.framework in Frameworks */,
+				2811CC85143718DA00F0D15E /* Cocoa.framework in Frameworks */,
+				2811CC86143718DA00F0D15E /* Growl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28098C03143698A900DBF059 /* 3rd Party Components */ = {
+			isa = PBXGroup;
+			children = (
+				28098C291436C7DC00DBF059 /* OARequestHeader */,
+				28C87CB4142DBBDC00AED3C4 /* ASI */,
+				285FA4001435EB3700E2668D /* JKHotkeyManager */,
+			);
+			name = "3rd Party Components";
+			sourceTree = "<group>";
+		};
+		28098C04143698C200DBF059 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				28098C0C1436999300DBF059 /* MerryAuthWindowController.h */,
+				28098C0A1436998300DBF059 /* MerryAuthWindowController.m */,
+				28098C1914369EF800DBF059 /* MerryAuthenticationService.h */,
+				28098C1A14369EF800DBF059 /* MerryAuthenticationService.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		28098C291436C7DC00DBF059 /* OARequestHeader */ = {
+			isa = PBXGroup;
+			children = (
+				28098C261436C6C500DBF059 /* OARequestHeader.h */,
+				28098C271436C6C500DBF059 /* OARequestHeader.m */,
+			);
+			name = OARequestHeader;
+			sourceTree = "<group>";
+		};
+		28098C341437089F00DBF059 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				28098C1814369D7400DBF059 /* MerryCredentials.h */,
+				28098C1C1436AA4D00DBF059 /* MerryUtil.h */,
+				28098C1D1436AA4D00DBF059 /* MerryUtil.m */,
+				28098C35143708CC00DBF059 /* MerryGrowlDelegate.h */,
+				28098C36143708CC00DBF059 /* MerryGrowlDelegate.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		285FA3F81435DA5A00E2668D /* CaptureNSTask */ = {
+			isa = PBXGroup;
+			children = (
+				28C87C78142DA1BD00AED3C4 /* CaptureOld */,
+				285FA3FA1435DA8700E2668D /* MerryNSTaskCaptureService.h */,
+				285FA3FB1435DA8700E2668D /* MerryNSTaskCaptureService.m */,
+			);
+			name = CaptureNSTask;
+			sourceTree = "<group>";
+		};
+		285FA4001435EB3700E2668D /* JKHotkeyManager */ = {
+			isa = PBXGroup;
+			children = (
+				285FA3FD1435EB2C00E2668D /* JFHotkeyManager.h */,
+				285FA3FE1435EB2C00E2668D /* JFHotkeyManager.m */,
+			);
+			name = JKHotkeyManager;
+			sourceTree = "<group>";
+		};
+		289220CF14373ECD00774AA7 /* Interface Related */ = {
+			isa = PBXGroup;
+			children = (
+				289220D214373EFE00774AA7 /* Resources */,
+				289220D114373EF700774AA7 /* Classes */,
+			);
+			name = "Interface Related";
+			sourceTree = "<group>";
+		};
+		289220D114373EF700774AA7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				289220D6143743C100774AA7 /* MerryStatusBarMenuController.h */,
+				289220D7143743C100774AA7 /* MerryStatusBarMenuController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		289220D214373EFE00774AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2800BADE1437547D00DF68C0 /* MerryIcon24x24.png */,
+				28C87C6F142DA1B300AED3C4 /* MainMenu.xib */,
+				28098C38143712A400DBF059 /* MerryNightmare.icns */,
+				28098C231436B0D400DBF059 /* MerrySnapAuthWindow.xib */,
+				289220D9143743F500774AA7 /* MerryStatusBarMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		28C87C4B142DA1B200AED3C4 = {
+			isa = PBXGroup;
+			children = (
+				28C87C60142DA1B300AED3C4 /* MerrySnap */,
+				28C87C59142DA1B300AED3C4 /* Frameworks */,
+				28C87C57142DA1B300AED3C4 /* Products */,
+				28C87C62142DA1B300AED3C4 /* MerrySnap-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		28C87C57142DA1B300AED3C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2811CC96143718DA00F0D15E /* MerrySnap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28C87C59142DA1B300AED3C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28098C3C1437160500DBF059 /* libz.1.2.3.dylib */,
+				2811CC991437205300F0D15E /* AppKit.framework */,
+				28098C2E143706A600DBF059 /* Growl.framework */,
+				28098BFF1436948200DBF059 /* WebKit.framework */,
+				285FA4051435ECA900E2668D /* Carbon.framework */,
+				28098BE9143693EF00DBF059 /* OAuthConsumer.framework */,
+				28098BEA143693EF00DBF059 /* YAJL.framework */,
+				287348AC142EABC200465B45 /* QuartzCore.framework */,
+				28C87CD0142DBC6600AED3C4 /* SystemConfiguration.framework */,
+				28C87CCE142DBC5F00AED3C4 /* CoreServices.framework */,
+				28C87C5A142DA1B300AED3C4 /* Cocoa.framework */,
+				28C87C5C142DA1B300AED3C4 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28C87C5C142DA1B300AED3C4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28C87C5D142DA1B300AED3C4 /* AppKit.framework */,
+				28C87C5E142DA1B300AED3C4 /* CoreData.framework */,
+				28C87C5F142DA1B300AED3C4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		28C87C60142DA1B300AED3C4 /* MerrySnap */ = {
+			isa = PBXGroup;
+			children = (
+				289220CF14373ECD00774AA7 /* Interface Related */,
+				28098C341437089F00DBF059 /* Shared */,
+				28098C03143698A900DBF059 /* 3rd Party Components */,
+				285FA3F81435DA5A00E2668D /* CaptureNSTask */,
+				28C87C79142DA1C500AED3C4 /* Settings */,
+				28C87C77142DA1BA00AED3C4 /* Upload */,
+				28C87C6C142DA1B300AED3C4 /* snapAppDelegate.h */,
+				28C87C6D142DA1B300AED3C4 /* snapAppDelegate.m */,
+				28C87C61142DA1B300AED3C4 /* Supporting Files */,
+			);
+			name = MerrySnap;
+			path = snap;
+			sourceTree = "<group>";
+		};
+		28C87C61142DA1B300AED3C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28098C321437086800DBF059 /* Growl Registration Ticket.growlRegDict */,
+				28C87C63142DA1B300AED3C4 /* InfoPlist.strings */,
+				28C87C66142DA1B300AED3C4 /* main.m */,
+				28C87C68142DA1B300AED3C4 /* MerrySnap-Prefix.pch */,
+				28C87C69142DA1B300AED3C4 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28C87C77142DA1BA00AED3C4 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				28C87C81142DA6E300AED3C4 /* MerryUploadService.h */,
+				28C87C82142DA6E300AED3C4 /* MerryUploadService.m */,
+			);
+			name = Upload;
+			sourceTree = "<group>";
+		};
+		28C87C78142DA1BD00AED3C4 /* CaptureOld */ = {
+			isa = PBXGroup;
+			children = (
+				28C87C7E142DA39400AED3C4 /* MerryCaptureService.h */,
+				28C87C7F142DA39400AED3C4 /* MerryCaptureService.m */,
+				28898815142E949300CC0757 /* MerryEmptyWindowService.h */,
+				28898816142E949300CC0757 /* MerryEmptyWindowService.m */,
+				287348A8142EA71A00465B45 /* MerryEmptyWindowView.h */,
+				287348A9142EA71A00465B45 /* MerryEmptyWindowView.m */,
+			);
+			name = CaptureOld;
+			sourceTree = "<group>";
+		};
+		28C87C79142DA1C500AED3C4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				28098C04143698C200DBF059 /* Authentication */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		28C87CB4142DBBDC00AED3C4 /* ASI */ = {
+			isa = PBXGroup;
+			children = (
+				28C87CB6142DBC1800AED3C4 /* ASIProgressDelegate.h */,
+				28C87CB7142DBC1800AED3C4 /* ASIHTTPRequestDelegate.h */,
+				28C87CB8142DBC1800AED3C4 /* ASIInputStream.h */,
+				28C87CB9142DBC1800AED3C4 /* ASIInputStream.m */,
+				28C87CBA142DBC1800AED3C4 /* ASIFormDataRequest.h */,
+				28C87CBB142DBC1800AED3C4 /* ASIFormDataRequest.m */,
+				28C87CBC142DBC1800AED3C4 /* ASIHTTPRequest.h */,
+				28C87CBD142DBC1900AED3C4 /* ASIHTTPRequest.m */,
+				28C87CBE142DBC1900AED3C4 /* ASINetworkQueue.h */,
+				28C87CBF142DBC1900AED3C4 /* ASINetworkQueue.m */,
+				28C87CC0142DBC1900AED3C4 /* ASICacheDelegate.h */,
+				28C87CC1142DBC1900AED3C4 /* ASIDownloadCache.h */,
+				28C87CC2142DBC1900AED3C4 /* ASIDownloadCache.m */,
+				28C87CC3142DBC1900AED3C4 /* ASIDataCompressor.h */,
+				28C87CC4142DBC1900AED3C4 /* ASIDataCompressor.m */,
+				28C87CC5142DBC1900AED3C4 /* ASIDataDecompressor.h */,
+				28C87CC6142DBC1900AED3C4 /* ASIDataDecompressor.m */,
+				28C87CB5142DBC1000AED3C4 /* ASIHTTPRequestConfig.h */,
+			);
+			name = ASI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2811CC66143718DA00F0D15E /* MerrySnap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2811CC93143718DA00F0D15E /* Build configuration list for PBXNativeTarget "MerrySnap" */;
+			buildPhases = (
+				2811CC67143718DA00F0D15E /* Sources */,
+				2811CC7C143718DA00F0D15E /* Frameworks */,
+				2811CC87143718DA00F0D15E /* Resources */,
+				2811CC8E143718DA00F0D15E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MerrySnap;
+			productName = snap;
+			productReference = 2811CC96143718DA00F0D15E /* MerrySnap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28C87C4D142DA1B200AED3C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = 28C87C50142DA1B200AED3C4 /* Build configuration list for PBXProject "MerrySnap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 28C87C4B142DA1B200AED3C4;
+			productRefGroup = 28C87C57142DA1B300AED3C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2811CC66143718DA00F0D15E /* MerrySnap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2811CC87143718DA00F0D15E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2811CC88143718DA00F0D15E /* InfoPlist.strings in Resources */,
+				2811CC89143718DA00F0D15E /* Credits.rtf in Resources */,
+				2811CC8A143718DA00F0D15E /* MainMenu.xib in Resources */,
+				2811CC8B143718DA00F0D15E /* MerrySnapAuthWindow.xib in Resources */,
+				2811CC8C143718DA00F0D15E /* Growl Registration Ticket.growlRegDict in Resources */,
+				2811CC8D143718DA00F0D15E /* MerryNightmare.icns in Resources */,
+				289220DA143743F500774AA7 /* MerryStatusBarMenu.xib in Resources */,
+				2800BADF1437547D00DF68C0 /* MerryIcon24x24.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2811CC67143718DA00F0D15E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2811CC68143718DA00F0D15E /* main.m in Sources */,
+				2811CC69143718DA00F0D15E /* snapAppDelegate.m in Sources */,
+				2811CC6A143718DA00F0D15E /* MerryCaptureService.m in Sources */,
+				2811CC6B143718DA00F0D15E /* MerryUploadService.m in Sources */,
+				2811CC6C143718DA00F0D15E /* ASIInputStream.m in Sources */,
+				2811CC6D143718DA00F0D15E /* ASIFormDataRequest.m in Sources */,
+				2811CC6E143718DA00F0D15E /* ASIHTTPRequest.m in Sources */,
+				2811CC6F143718DA00F0D15E /* ASINetworkQueue.m in Sources */,
+				2811CC70143718DA00F0D15E /* ASIDownloadCache.m in Sources */,
+				2811CC71143718DA00F0D15E /* ASIDataCompressor.m in Sources */,
+				2811CC72143718DA00F0D15E /* ASIDataDecompressor.m in Sources */,
+				2811CC73143718DA00F0D15E /* MerryEmptyWindowService.m in Sources */,
+				2811CC74143718DA00F0D15E /* MerryEmptyWindowView.m in Sources */,
+				2811CC75143718DA00F0D15E /* MerryNSTaskCaptureService.m in Sources */,
+				2811CC76143718DA00F0D15E /* JFHotkeyManager.m in Sources */,
+				2811CC77143718DA00F0D15E /* MerryAuthWindowController.m in Sources */,
+				2811CC78143718DA00F0D15E /* MerryAuthenticationService.m in Sources */,
+				2811CC79143718DA00F0D15E /* MerryUtil.m in Sources */,
+				2811CC7A143718DA00F0D15E /* OARequestHeader.m in Sources */,
+				2811CC7B143718DA00F0D15E /* MerryGrowlDelegate.m in Sources */,
+				289220D8143743C100774AA7 /* MerryStatusBarMenuController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28C87C63142DA1B300AED3C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C87C64142DA1B300AED3C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		28C87C69142DA1B300AED3C4 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C87C6A142DA1B300AED3C4 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		28C87C6F142DA1B300AED3C4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C87C70142DA1B300AED3C4 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2811CC94143718DA00F0D15E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "snap/MerrySnap-Prefix.pch";
+				INFOPLIST_FILE = "snap/MerrySnap-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = MerrySnap;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2811CC95143718DA00F0D15E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "snap/MerrySnap-Prefix.pch";
+				INFOPLIST_FILE = "snap/MerrySnap-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = MerrySnap;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		28C87C72142DA1B300AED3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		28C87C73142DA1B300AED3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2811CC93143718DA00F0D15E /* Build configuration list for PBXNativeTarget "MerrySnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2811CC94143718DA00F0D15E /* Debug */,
+				2811CC95143718DA00F0D15E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C87C50142DA1B200AED3C4 /* Build configuration list for PBXProject "MerrySnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C87C72142DA1B300AED3C4 /* Debug */,
+				28C87C73142DA1B300AED3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28C87C4D142DA1B200AED3C4 /* Project object */;
+}
