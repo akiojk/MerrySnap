@@ -8,6 +8,8 @@
 
 #import "MerryAuthWindowController.h"
 
+int windowWidth = 800;
+int windowHeight = 750;
 
 @implementation MerryAuthWindowController
 
@@ -39,13 +41,13 @@
                                                              [merryLogoView frame].size.height);
         
         
-        [merryAuthWindowWindow setContentView: merryLogoView];
-        
         [merryProgressIndicator startAnimation: self]; // start progress bar
+        
+        [merryAuthWindowWindow setContentView: merryLogoView];
+        [merryAuthWindowWindow makeKeyAndOrderFront: self];
         
         [merryAuthWindowWindow setFrame: merryWindowWithMerryLogoViewRect display:YES];
         [merryAuthWindowWindow center];
-        [merryAuthWindowWindow makeKeyAndOrderFront: self];
         
     }
     
@@ -76,8 +78,6 @@
     //                                                                  [[[frame frameView] documentView] frame].size.width,
     //                                                                  [[[frame frameView] documentView] frame].size.height);
     
-    int windowWidth = 800;
-    int windowHeight = 600;
     
     NSRect merryWindowWithMerryAuthWindowWebViewRect = NSMakeRect( [merryAuthWindowWindow frame].origin.x + 0.5f*([merryLogoView frame].size.width - windowWidth),
                                                                   [merryAuthWindowWindow frame].origin.y + [merryLogoView frame].size.height - windowHeight,

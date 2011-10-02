@@ -57,12 +57,17 @@
     
     NSString *oauthHeaders = [requestHeader generateRequestHeaders];
     
+    // prepare date
+    NSDateFormatter *currentDateFormatter = [[NSDateFormatter alloc] init];
+    [currentDateFormatter setDateFormat: @"YYYY.MM.dd HH:mm"];
+    NSString *currentDateString = [currentDateFormatter stringFromDate: [NSDate date]];
+    
     ASIFormDataRequest *uploadReq = [ASIFormDataRequest requestWithURL: twitpicServiceURL];
     
     [uploadReq addRequestHeader: @"X-Verify-Credentials-Authorization" value: oauthHeaders];
     [uploadReq addRequestHeader: @"X-Auth-Service-Provider" value: twitterProviderURLString];
     [uploadReq addPostValue: TWITPIC_API_KEY forKey: @"key"];
-    [uploadReq addPostValue: @"from MerrySnap" forKey: @"message"];
+    [uploadReq addPostValue: [NSString stringWithFormat: @"%@ by MerrySnap", currentDateString] forKey: @"message"];
     [uploadReq addData: data forKey: @"media"];
     
     [uploadReq setRequestMethod: @"POST"];
