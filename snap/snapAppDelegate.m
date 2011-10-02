@@ -22,7 +22,7 @@
 
     
     // turn off the useless main window
-    [[self window] orderOut: self];
+//    [[self window] orderOut: self];
     
     
     //    merryCaptureService = [[MerryCaptureService alloc] initWithMerrySnapDelegate:self];
