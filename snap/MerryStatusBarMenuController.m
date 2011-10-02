@@ -24,7 +24,6 @@
     if (self) {
         
         [dropDownMainMenu setAutoenablesItems: NO]; // We will take over the menu item enabling/disabling
-        [dropDownMainMenu setDelegate: self];
         
         merrySnapDelegate = delegate;
         [NSBundle loadNibNamed: @"MerryStatusBarMenu" owner:self]; 
@@ -45,6 +44,8 @@
 
 - (void) newUserSignedIn: (NSNotification *) notification
 {
+    //TODO: Check if these setEnabled are still required after specifing the validateMenuItem stuff
+    
     [signInMenuItem setEnabled: NO];
     [signInMenuItem setTitle: [NSString stringWithFormat:@"Signed in as %@", [notification object]]];
     [signOutMenuItem setEnabled: YES];
@@ -89,6 +90,10 @@
     
 }
 
+
+// The following is declared in NSMenuValidation protocol. Our class must be the Target of the MenuItem to make it effect.
+// Making our class target might be by making our class as NIB's File Owner & having MenuItem pointing to the IBActions
+
 - (BOOL) validateMenuItem:(NSMenuItem *)menuItem
 {
     
@@ -97,8 +102,7 @@
     if(menuItem == signInMenuItem)
     {
         [menuItem setTitle: [NSString stringWithFormat: @"Signed in as %@", screen_name]];
-        return (screen_name == nil);
-        
+        return (screen_name == nil);    
     }
     else if(menuItem == signOutMenuItem)
     {
