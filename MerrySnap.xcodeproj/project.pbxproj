@@ -48,11 +48,11 @@
 		2811CC91143718DA00F0D15E /* OAuthConsumer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28098BE9143693EF00DBF059 /* OAuthConsumer.framework */; };
 		2811CC92143718DA00F0D15E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28098C2E143706A600DBF059 /* Growl.framework */; };
 		2811CC9B1437205B00F0D15E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2811CC991437205300F0D15E /* AppKit.framework */; };
-		2844210A14380B9500033A43 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2844210914380B9500033A43 /* Sparkle.framework */; };
-		2844210C14380C6D00033A43 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2844210914380B9500033A43 /* Sparkle.framework */; };
 		289220D8143743C100774AA7 /* MerryStatusBarMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289220D7143743C100774AA7 /* MerryStatusBarMenuController.m */; };
 		289220DA143743F500774AA7 /* MerryStatusBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289220D9143743F500774AA7 /* MerryStatusBarMenu.xib */; };
 		2895380914380DFC00150852 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2895380814380DFC00150852 /* dsa_pub.pem */; };
+		28AAFF5314381C6800CFC159 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AAFF5214381C6800CFC159 /* Sparkle.framework */; };
+		28AAFF5414381C8500CFC159 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28AAFF5214381C6800CFC159 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,10 +62,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2844210C14380C6D00033A43 /* Sparkle.framework in CopyFiles */,
 				2811CC90143718DA00F0D15E /* YAJL.framework in CopyFiles */,
 				2811CC91143718DA00F0D15E /* OAuthConsumer.framework in CopyFiles */,
 				2811CC92143718DA00F0D15E /* Growl.framework in CopyFiles */,
+				28AAFF5414381C8500CFC159 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,6 @@
 		28098C3C1437160500DBF059 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		2811CC96143718DA00F0D15E /* MerrySnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerrySnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2811CC991437205300F0D15E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		2844210914380B9500033A43 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		285FA3FA1435DA8700E2668D /* MerryNSTaskCaptureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerryNSTaskCaptureService.h; sourceTree = "<group>"; };
 		285FA3FB1435DA8700E2668D /* MerryNSTaskCaptureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryNSTaskCaptureService.m; sourceTree = "<group>"; };
 		285FA3FD1435EB2C00E2668D /* JFHotkeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFHotkeyManager.h; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		289220D7143743C100774AA7 /* MerryStatusBarMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerryStatusBarMenuController.m; sourceTree = "<group>"; };
 		289220D9143743F500774AA7 /* MerryStatusBarMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerryStatusBarMenu.xib; sourceTree = "<group>"; };
 		2895380814380DFC00150852 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		28AAFF5214381C6800CFC159 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		28C87C5A142DA1B300AED3C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		28C87C5D142DA1B300AED3C4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		28C87C5E142DA1B300AED3C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -163,7 +163,7 @@
 				2811CC84143718DA00F0D15E /* CoreServices.framework in Frameworks */,
 				2811CC85143718DA00F0D15E /* Cocoa.framework in Frameworks */,
 				2811CC86143718DA00F0D15E /* Growl.framework in Frameworks */,
-				2844210A14380B9500033A43 /* Sparkle.framework in Frameworks */,
+				28AAFF5314381C6800CFC159 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				28098C3C1437160500DBF059 /* libz.1.2.3.dylib */,
-				2844210914380B9500033A43 /* Sparkle.framework */,
+				28AAFF5214381C6800CFC159 /* Sparkle.framework */,
 				2811CC991437205300F0D15E /* AppKit.framework */,
 				28098C2E143706A600DBF059 /* Growl.framework */,
 				28098BFF1436948200DBF059 /* WebKit.framework */,
