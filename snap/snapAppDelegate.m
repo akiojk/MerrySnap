@@ -20,6 +20,7 @@
     // since we are specifying LSUIELEMENT=1 to make the app Agent, this ensures that all windows pop out to the front rather than hid
     [NSApp activateIgnoringOtherApps: YES]; 
     
+    accessToken = [[OAToken alloc] initWithKeychainUsingAppName: KEYCHAIN_PREFIX serviceProviderName:KEYCHAIN_SPNAME];
     
     // turn off the useless main window
     //    [[self window] orderOut: self];
@@ -40,7 +41,6 @@
     
     NSLog(@"user default: %@", [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]);
     
-    accessToken = [[OAToken alloc] initWithKeychainUsingAppName: KEYCHAIN_PREFIX serviceProviderName:KEYCHAIN_SPNAME];
     
 //    if (![[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]) // since there's no easy way to delete keychain token... we use userdefault check
     if (!accessToken)

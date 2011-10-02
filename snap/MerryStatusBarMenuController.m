@@ -24,6 +24,7 @@
     if (self) {
         
         [dropDownMainMenu setAutoenablesItems: NO]; // We will take over the menu item enabling/disabling
+        [dropDownMainMenu setDelegate: self];
         
         merrySnapDelegate = delegate;
         [NSBundle loadNibNamed: @"MerryStatusBarMenu" owner:self]; 
@@ -31,26 +32,12 @@
         [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(newUserSignedIn:) name: NOTIFICATION_LOGGED_IN  object: nil];
         [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(userHasSignedOut) name: NOTIFICATION_LOGGED_OUT  object: nil];
         
-        NSString *screen_name = [[NSUserDefaults standardUserDefaults] valueForKey: USER_DEFAULT_SCREEN_NAME];
-        
-        if (!screen_name) // user not logged in
-        {
-            [signOutMenuItem setEnabled: NO];
-            [signInMenuItem setEnabled: YES];
-        }
-        else
-        {
-            [signInMenuItem setEnabled: NO];
-            [signInMenuItem setTitle: [NSString stringWithFormat:@"Signed in as %@", screen_name]];
-            [signOutMenuItem setEnabled: YES];
-        }
-        
-        
         NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSSquareStatusItemLength];
         [statusItem setImage: [NSImage imageNamed: @"MerryIcon24x24.png"]];
         [statusItem setMenu: dropDownMainMenu];
         [statusItem setHighlightMode: YES];
         [statusItem retain];
+        
     }
     
     return self;
@@ -101,4 +88,26 @@
 {
     
 }
+
+- (BOOL) validateMenuItem:(NSMenuItem *)menuItem
+{
+    
+    NSString *screen_name = [[NSUserDefaults standardUserDefaults] valueForKey: USER_DEFAULT_SCREEN_NAME];
+    
+    if(menuItem == signInMenuItem)
+    {
+        [menuItem setTitle: [NSString stringWithFormat: @"Signed in as %@", screen_name]];
+        return (screen_name == nil);
+        
+    }
+    else if(menuItem == signOutMenuItem)
+    {
+        return (screen_name != nil);
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 @end

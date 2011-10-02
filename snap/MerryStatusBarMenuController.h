@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MerryCredentials.h"
 
-@interface MerryStatusBarMenuController : NSObject
+@interface MerryStatusBarMenuController : NSObject <NSMenuDelegate>
 {
     IBOutlet NSMenuItem *aboutMerrySnapMenuItem;
     IBOutlet NSMenuItem *preferencesMenuItem;
