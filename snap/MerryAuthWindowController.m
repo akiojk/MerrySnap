@@ -47,7 +47,7 @@ int windowHeight = 750;
         [merryAuthWindowWindow makeKeyAndOrderFront: self];
         
         [merryAuthWindowWindow setFrame: merryWindowWithMerryLogoViewRect display:YES];
-        [merryAuthWindowWindow center];
+//        [merryAuthWindowWindow center];
         
     }
     
@@ -80,7 +80,7 @@ int windowHeight = 750;
     
     
     NSRect merryWindowWithMerryAuthWindowWebViewRect = NSMakeRect( [merryAuthWindowWindow frame].origin.x + 0.5f*([merryLogoView frame].size.width - windowWidth),
-                                                                  [merryAuthWindowWindow frame].origin.y + [merryLogoView frame].size.height - windowHeight,
+                                                                  [merryAuthWindowWindow frame].origin.y + 0.5f*([merryLogoView frame].size.height - windowHeight),
                                                                   windowWidth,
                                                                   windowHeight);
     

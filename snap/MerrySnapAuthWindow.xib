@@ -56,7 +56,7 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="626708905">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -65,7 +65,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{182, 62}, {205, 17}}</string>
 						<reference key="NSSuperview" ref="626708905"/>
-						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:3936</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="699530284">
@@ -105,7 +104,6 @@
 						<object class="NSPSMatrix" key="NSDrawMatrix"/>
 						<string key="NSFrame">{{184, 42}, {161, 12}}</string>
 						<reference key="NSSuperview" ref="626708905"/>
-						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:3954</string>
 						<int key="NSpiFlags">16650</int>
 						<double key="NSMaxValue">100</double>
@@ -127,7 +125,6 @@
 						</object>
 						<string key="NSFrame">{{7, 29}, {343, 345}}</string>
 						<reference key="NSSuperview" ref="626708905"/>
-						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:1658</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="268881739">
@@ -147,13 +144,11 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{363, 374}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<string key="NSReuseIdentifierKey">_NS:499</string>
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSWindowTemplate" id="1005">
-				<int key="NSWindowStyleMask">15</int>
+				<int key="NSWindowStyleMask">7</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{1021, 473}, {480, 350}}</string>
 				<int key="NSWTFlags">544735232</int>
@@ -174,7 +169,7 @@
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="WebView" id="463181284">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableSet" key="NSDragTypes">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -198,8 +193,6 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{327, 291}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:51</string>
 				<string key="FrameName"/>
@@ -396,7 +389,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{357, 418}, {480, 270}}</string>
-					<integer value="1"/>
+					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

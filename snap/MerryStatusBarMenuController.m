@@ -22,6 +22,9 @@
 {
     self = [super init];
     if (self) {
+        
+        [dropDownMainMenu setAutoenablesItems: NO]; // We will take over the menu item enabling/disabling
+        
         merrySnapDelegate = delegate;
         [NSBundle loadNibNamed: @"MerryStatusBarMenu" owner:self]; 
         
@@ -32,8 +35,8 @@
         
         if (!screen_name) // user not logged in
         {
-            [signInMenuItem setEnabled: YES];
             [signOutMenuItem setEnabled: NO];
+            [signInMenuItem setEnabled: YES];
         }
         else
         {
@@ -42,7 +45,6 @@
             [signOutMenuItem setEnabled: YES];
         }
         
-        [dropDownMainMenu setAutoenablesItems: NO]; // We will take over the menu item enabling/disabling
         
         NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSSquareStatusItemLength];
         [statusItem setImage: [NSImage imageNamed: @"MerryIcon24x24.png"]];

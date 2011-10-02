@@ -80,7 +80,7 @@
 }
 
 
-#pragma mark --- OAConsumer Delegates ---
+#pragma mark --- OAConsumer Delegates - --
 
 - (void) requestTokenTicket: (OAServiceTicket *) ticket didFinishWithData:(NSData *)data
 {
@@ -108,7 +108,8 @@
             globalOAToken = [[OAToken alloc] initWithHTTPResponseBody: responseBody];
             NSLog(@"Got accesstoken. Key = %@, Secret = %@", [globalOAToken key], [globalOAToken secret]);
             
-            [globalOAToken storeInUserDefaultsWithServiceProviderName: KEYCHAIN_SPNAME  prefix: KEYCHAIN_PREFIX];
+//            [globalOAToken storeInUserDefaultsWithServiceProviderName: KEYCHAIN_SPNAME  prefix: KEYCHAIN_PREFIX];
+            [globalOAToken storeInDefaultKeychainWithAppName: KEYCHAIN_PREFIX serviceProviderName:KEYCHAIN_SPNAME];
             
             NSURL *urlForValues = [NSURL URLWithString: [NSString stringWithFormat: @"http://ak.io/?%@", responseBody]];
             
@@ -129,7 +130,9 @@
 
 - (void) requestTokenTicket: (OAServiceTicket *) ticket didFailWithError:(NSData *)data
 {
-    NSLog(@"something went wrong.");
+    NSLog(@"something went wrong.  ");
+    [[NSNotificationCenter defaultCenter] postNotificationName: NOTIFICATION_PLEASE_RETRY_AUTH object:nil]; 
+    
 }
 
 @end

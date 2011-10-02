@@ -19,10 +19,10 @@
     
     // since we are specifying LSUIELEMENT=1 to make the app Agent, this ensures that all windows pop out to the front rather than hid
     [NSApp activateIgnoringOtherApps: YES]; 
-
+    
     
     // turn off the useless main window
-//    [[self window] orderOut: self];
+    //    [[self window] orderOut: self];
     
     
     //    merryCaptureService = [[MerryCaptureService alloc] initWithMerrySnapDelegate:self];
@@ -39,7 +39,11 @@
     [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(startAuthentication) name: NOTIFICATION_RETRY_AUTH_GO object:nil];
     
     NSLog(@"user default: %@", [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]);
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]) // since there's no easy way to delete keychain token... we use userdefault check
+    
+    accessToken = [[OAToken alloc] initWithKeychainUsingAppName: KEYCHAIN_PREFIX serviceProviderName:KEYCHAIN_SPNAME];
+    
+//    if (![[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]) // since there's no easy way to delete keychain token... we use userdefault check
+    if (!accessToken)
     {
         [self startAuthentication];
         // start authentication
@@ -47,10 +51,12 @@
     }
     else
     {
+        NSLog(@"access token: %@ %@", [accessToken key], [accessToken secret]);
         
         // try authentication
         
         //if authentication succeeds
+        
         [self prepareForUse];
         
         //if authentication fails
@@ -76,6 +82,14 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey: USER_DEFAULT_SCREEN_NAME];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey: USER_DEFAULT_USER_ID];
     
+    if (!accessToken)
+    {
+        accessToken = [[OAToken alloc] initWithKeychainUsingAppName: KEYCHAIN_PREFIX serviceProviderName: KEYCHAIN_SPNAME];
+    }
+
+    [accessToken removeFromDefaultKeychainWithAppName: KEYCHAIN_PREFIX serviceProviderName: KEYCHAIN_SPNAME];
+    
+    
     [[NSNotificationCenter defaultCenter] postNotificationName: NOTIFICATION_LOGGED_OUT object: nil];
     
     // remove keybinding
@@ -85,9 +99,10 @@
 
 - (void) prepareForUse
 {
-    accessToken = [[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:KEYCHAIN_SPNAME 
-                                                                         prefix:KEYCHAIN_PREFIX];
+    //    accessToken = [[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:KEYCHAIN_SPNAME 
+    //                                                                         prefix:KEYCHAIN_PREFIX];
     
+    accessToken = [[OAToken alloc] initWithKeychainUsingAppName: KEYCHAIN_PREFIX serviceProviderName: KEYCHAIN_SPNAME];
     
     merryNSTaskCaptureService = [[MerryNSTaskCaptureService alloc] initWithMerrySnapDelegate: self];
     
