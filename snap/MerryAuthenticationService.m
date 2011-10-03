@@ -35,30 +35,25 @@
     
     currentAuthStage = AUTH_STAGE_REQUEST_TOKEN;
     
-    OADataFetcher *oaDataFetcher = [[OADataFetcher alloc] init];
-    
     OAMutableURLRequest *oaMutableURLRequest = [[OAMutableURLRequest alloc] initWithURL: [NSURL URLWithString:@"https://api.twitter.com/oauth/request_token"]
                                                                                consumer: globalOAConsumer 
                                                                                   token: _oaToken 
                                                                                   realm: nil
                                                                       signatureProvider: nil];
+    
     [oaMutableURLRequest setHTTPMethod: @"POST"];
     
-    [oaDataFetcher fetchDataWithRequest: oaMutableURLRequest 
-                               delegate: self 
-                      didFinishSelector: @selector(requestTokenTicket:didFinishWithData:)
-                        didFailSelector: @selector(requestTokenTicket:didFailWithError:)];
-    
-    
+    OAAsynchronousDataFetcher *oaDataFetcher = [[OAAsynchronousDataFetcher alloc] initWithRequest: oaMutableURLRequest 
+                                                                                         delegate: self 
+                                                                                didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
+                                                                                  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
+    [oaDataFetcher start];
 }
 
 - (void) fetchAccessTokenWithOAuthVerifier: (NSString *) verifier
 {
     currentAuthStage = AUTH_STAGE_ACCESS_TOKEN;
-    
-    OADataFetcher *oaDataFetcher = [[OADataFetcher alloc] init];
-    
-    
+        
     [globalOAToken setValue: verifier forKey:@"verifier"];
     
     NSLog(@"we are using these stuff to grab access token: key: %@\nsecret: %@\nverifier: %@", [globalOAToken key], [globalOAToken secret], [globalOAToken verifier]);
@@ -71,11 +66,12 @@
     
     [oaMutableURLRequest setHTTPMethod: @"POST"];
     
-    [oaDataFetcher fetchDataWithRequest: oaMutableURLRequest 
-                               delegate: self 
-                      didFinishSelector: @selector(requestTokenTicket:didFinishWithData:)
-                        didFailSelector: @selector(requestTokenTicket:didFailWithError:)];
+    OAAsynchronousDataFetcher *oaDataFetcher = [[OAAsynchronousDataFetcher alloc] initWithRequest: oaMutableURLRequest 
+                                                                                         delegate: self 
+                                                                                didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
+                                                                                  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
     
+    [oaDataFetcher start];
     
 }
 
@@ -108,7 +104,7 @@
             globalOAToken = [[OAToken alloc] initWithHTTPResponseBody: responseBody];
             NSLog(@"Got accesstoken. Key = %@, Secret = %@", [globalOAToken key], [globalOAToken secret]);
             
-//            [globalOAToken storeInUserDefaultsWithServiceProviderName: KEYCHAIN_SPNAME  prefix: KEYCHAIN_PREFIX];
+            //            [globalOAToken storeInUserDefaultsWithServiceProviderName: KEYCHAIN_SPNAME  prefix: KEYCHAIN_PREFIX];
             [globalOAToken storeInDefaultKeychainWithAppName: KEYCHAIN_PREFIX serviceProviderName:KEYCHAIN_SPNAME];
             
             NSURL *urlForValues = [NSURL URLWithString: [NSString stringWithFormat: @"http://ak.io/?%@", responseBody]];

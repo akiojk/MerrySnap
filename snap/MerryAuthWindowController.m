@@ -47,6 +47,7 @@ int windowHeight = 750;
         [merryAuthWindowWindow makeKeyAndOrderFront: self];
         
         [merryAuthWindowWindow setFrame: merryWindowWithMerryLogoViewRect display:YES];
+
 //        [merryAuthWindowWindow center];
         
     }
@@ -100,6 +101,7 @@ int windowHeight = 750;
     [merryAuthWindowWindow setContentView: merryAuthWindowWebView];
     
     
+    NSLog(@"Setting Frame - - - - - - ");
 }
 
 

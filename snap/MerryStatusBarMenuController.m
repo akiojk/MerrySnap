@@ -45,16 +45,12 @@
 
 - (void) newUserSignedIn: (NSNotification *) notification
 {
-    [signInMenuItem setEnabled: NO];
-    [signInMenuItem setTitle: [NSString stringWithFormat:@"Signed in as %@", [notification object]]];
-    [signOutMenuItem setEnabled: YES];
+
 }
 
 - (void) userHasSignedOut
 {
-    [signInMenuItem setEnabled: YES];
-    [signInMenuItem setTitle: @"Sign in..."];
-    [signOutMenuItem setEnabled: NO];
+
 }
 
 - (IBAction) aboutMerrySnapMenuItemClickedBy: (id) sender
@@ -96,7 +92,7 @@
     
     if(menuItem == signInMenuItem)
     {
-        [menuItem setTitle: [NSString stringWithFormat: @"Signed in as %@", screen_name]];
+        [menuItem setTitle: screen_name ? [NSString stringWithFormat: @"Signed in as %@", screen_name] : @"Sign in..."];
         return (screen_name == nil);
         
     }
