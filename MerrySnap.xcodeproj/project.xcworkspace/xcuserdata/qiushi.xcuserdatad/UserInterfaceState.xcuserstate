@@ -286,11 +286,11 @@
 			</array>
 		</dict>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>PrimaryDocumentTimestamp</string>
+		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>{0, 0}</string>
-		<string>{0, 1036}</string>
-		<real>339320287.02485597</real>
+		<real>339320409.687446</real>
+		<string>{5518, 1087}</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -557,7 +557,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/qiushi/Cocoa/snap/MerrySnap.xcodeproj/</string>
-		<real>339320287.02456599</real>
+		<real>339320409.68725002</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1037,11 +1037,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>28</integer>
+					<integer>27</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1085,11 +1085,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>28</integer>
+					<integer>27</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1133,11 +1133,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>28</integer>
+					<integer>27</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1180,11 +1180,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>28</integer>
+					<integer>27</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1228,11 +1228,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>28</integer>
+					<integer>27</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1275,11 +1275,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>28</integer>
+					<integer>27</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>27</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2594,7 +2594,7 @@
 				<integer>247</integer>
 			</dict>
 		</dict>
-		<real>339320287.02744299</real>
+		<real>339320409.688905</real>
 		<dict>
 			<key>$class</key>
 			<dict>
