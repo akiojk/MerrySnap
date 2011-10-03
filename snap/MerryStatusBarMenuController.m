@@ -61,7 +61,9 @@
 
 - (IBAction) aboutMerrySnapMenuItemClickedBy: (id) sender
 {
+    [NSApp orderFrontStandardAboutPanel: self];
     
+//    [NSApp orderFrontStandardAboutPanelWithOptions:<#(NSDictionary *)#>];
 }
 
 - (IBAction) preferencesMenuItemClickedBy: (id) sender
