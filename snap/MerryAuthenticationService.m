@@ -56,7 +56,7 @@
         
     [globalOAToken setValue: verifier forKey:@"verifier"];
     
-    NSLog(@"we are using these stuff to grab access token: key: %@\nsecret: %@\nverifier: %@", [globalOAToken key], [globalOAToken secret], [globalOAToken verifier]);
+//    NSLog(@"we are using these stuff to grab access token: key: %@\nsecret: %@\nverifier: %@", [globalOAToken key], [globalOAToken secret], [globalOAToken verifier]);
     
     OAMutableURLRequest *oaMutableURLRequest = [[OAMutableURLRequest alloc] initWithURL: [NSURL URLWithString: @"https://api.twitter.com/oauth/access_token"]
                                                                                consumer: globalOAConsumer 
@@ -81,14 +81,14 @@
 - (void) requestTokenTicket: (OAServiceTicket *) ticket didFinishWithData:(NSData *)data
 {
     NSString *responseBody = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-    NSLog(@"responseBody: %@", responseBody);
+//    NSLog(@"responseBody: %@", responseBody);
     
     if([ticket didSucceed])
     {
         if(currentAuthStage == AUTH_STAGE_REQUEST_TOKEN)
         {
             globalOAToken = [[OAToken alloc] initWithHTTPResponseBody: responseBody];
-            NSLog(@"requestToken: %@", [globalOAToken key]);
+//            NSLog(@"requestToken: %@", [globalOAToken key]);
             
             [merryAuthWindowController openAuthURL: [NSURL URLWithString: 
                                                      [NSString stringWithFormat:
@@ -102,14 +102,14 @@
         else if(currentAuthStage == AUTH_STAGE_ACCESS_TOKEN)
         {
             globalOAToken = [[OAToken alloc] initWithHTTPResponseBody: responseBody];
-            NSLog(@"Got accesstoken. Key = %@, Secret = %@", [globalOAToken key], [globalOAToken secret]);
+//            NSLog(@"Got accesstoken. Key = %@, Secret = %@", [globalOAToken key], [globalOAToken secret]);
             
             //            [globalOAToken storeInUserDefaultsWithServiceProviderName: KEYCHAIN_SPNAME  prefix: KEYCHAIN_PREFIX];
             [globalOAToken storeInDefaultKeychainWithAppName: KEYCHAIN_PREFIX serviceProviderName:KEYCHAIN_SPNAME];
             
             NSURL *urlForValues = [NSURL URLWithString: [NSString stringWithFormat: @"http://ak.io/?%@", responseBody]];
             
-            NSLog(@"we have screen_name=%@, user_id=%@", [MerryUtil queryStringFromURL: urlForValues forKey:@"screen_name"], [MerryUtil queryStringFromURL: urlForValues forKey:@"user_id"]);
+//            NSLog(@"we have screen_name=%@, user_id=%@", [MerryUtil queryStringFromURL: urlForValues forKey:@"screen_name"], [MerryUtil queryStringFromURL: urlForValues forKey:@"user_id"]);
             
             // save screen_name & stuff
             
@@ -126,7 +126,7 @@
 
 - (void) requestTokenTicket: (OAServiceTicket *) ticket didFailWithError:(NSData *)data
 {
-    NSLog(@"something went wrong.  ");
+//    NSLog(@"something went wrong.  ");
     [[NSNotificationCenter defaultCenter] postNotificationName: NOTIFICATION_PLEASE_RETRY_AUTH object:nil]; 
     
 }

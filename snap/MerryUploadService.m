@@ -91,7 +91,7 @@
             NSString *resultURLString = [twitpicReturnResultSet valueForKey:@"url"];
             NSString *resultID = [twitpicReturnResultSet valueForKey:@"id"];
             
-            NSLog(@"Getting URL: %@, id: %@", resultURLString, resultID);
+//            NSLog(@"Getting URL: %@, id: %@", resultURLString, resultID);
             
             [[NSPasteboard generalPasteboard] clearContents];
             [[NSPasteboard generalPasteboard] declareTypes: [NSArray arrayWithObject: NSStringPboardType] owner:nil];

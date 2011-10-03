@@ -39,7 +39,7 @@
     // direct the user for re-authentication shall fail
     [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(startAuthentication) name: NOTIFICATION_RETRY_AUTH_GO object:nil];
     
-    NSLog(@"user default: %@", [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]);
+//    NSLog(@"user default: %@", [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]);
     
     
 //    if (![[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_SCREEN_NAME]) // since there's no easy way to delete keychain token... we use userdefault check
@@ -51,7 +51,7 @@
     }
     else
     {
-        NSLog(@"access token: %@ %@", [accessToken key], [accessToken secret]);
+//        NSLog(@"access token: %@ %@", [accessToken key], [accessToken secret]);
         
         // try authentication
         
@@ -114,7 +114,7 @@
 
 - (void) doUpload: (NSData *) uploadData
 {
-    NSLog(@"access token we got: key: %@ secret %@", [accessToken key], [accessToken secret]);
+//    NSLog(@"access token we got: key: %@ secret %@", [accessToken key], [accessToken secret]);
     merryUploadService = [[MerryUploadService alloc] initWithMerrySnapDelegate:self];
     [merryUploadService uploadWithData: uploadData OAToken: accessToken];
 }

@@ -47,8 +47,8 @@ int windowHeight = 750;
         [merryAuthWindowWindow makeKeyAndOrderFront: self];
         
         [merryAuthWindowWindow setFrame: merryWindowWithMerryLogoViewRect display:YES];
-
-//        [merryAuthWindowWindow center];
+        
+        //        [merryAuthWindowWindow center];
         
     }
     
@@ -64,7 +64,7 @@ int windowHeight = 750;
 
 - (void) openAuthURL: (NSURL *) url
 {
-    NSLog(@"we are opening url: %@", [url absoluteString]);
+    //    NSLog(@"we are opening url: %@", [url absoluteString]);
     
     [[merryAuthWindowWebView mainFrame] loadRequest: [NSURLRequest requestWithURL: url]];
 }
@@ -100,8 +100,6 @@ int windowHeight = 750;
     [merryAuthWindowWindow setFrame: merryWindowWithMerryAuthWindowWebViewRect display: YES animate: YES];
     [merryAuthWindowWindow setContentView: merryAuthWindowWebView];
     
-    
-    NSLog(@"Setting Frame - - - - - - ");
 }
 
 
@@ -109,11 +107,11 @@ int windowHeight = 750;
 - (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame
 {
     NSURL *receivedURL = [[[frame provisionalDataSource] request] URL];
-    NSLog(@"didstartprovisionalloadforframe. %@", [receivedURL absoluteString]);
+//    NSLog(@"didstartprovisionalloadforframe. %@", [receivedURL absoluteString]);
     
     if ([[receivedURL absoluteString] hasPrefix: CALLBACK_URL_RETRY])
     {
-        NSLog(@"user initial load/retrying");
+        //        NSLog(@"user initial load/retrying");
     }
     else
     {
@@ -121,18 +119,24 @@ int windowHeight = 750;
         {
             // prompt user that he has denied authorisation by popup or something.
             
-            NSLog(@"denied. closing window.");
+            //            NSLog(@"denied. closing window.");
             
             [self postRetryAuthNotification];
             
         }
         else if([[receivedURL absoluteString] hasPrefix: CALLBACK_URL_PASSED])
         {
-            NSLog(@"successfully authenticated. now finalizing authentication");
+            
+            /* 
+             note that we have check at willPerformClientRedirect: for this CALLBACK_URL_PASSED
+             since it closes window faster than this. We are relying willPerformClientRedirect:
+             to close the window in time
+             */
+            //            NSLog(@"successfully authenticated. now finalizing authentication");
             
             NSString *oauthVerifier = [MerryUtil queryStringFromURL: receivedURL forKey: @"oauth_verifier"];
             
-            NSLog(@"we got oauth verifier: %@", oauthVerifier);
+            //            NSLog(@"we got oauth verifier: %@", oauthVerifier);
             
             [merryAuthenticationService performSelector: @selector(fetchAccessTokenWithOAuthVerifier:) withObject: oauthVerifier]; // calling parent to grab access token
             
@@ -141,7 +145,7 @@ int windowHeight = 750;
         {
             // if url not known, open external safari and terminate authentication
             
-            NSLog(@"redirecting to somewhere possibly outside the authentication flow: %@", [receivedURL absoluteString]);
+            //            NSLog(@"redirecting to somewhere possibly outside the authentication flow: %@", [receivedURL absoluteString]);
             
             [[NSWorkspace sharedWorkspace] openURL: receivedURL]; // open external safari to avoid discouraging user
             
@@ -168,56 +172,60 @@ int windowHeight = 750;
 - (void) windowWillClose:(NSNotification *)notification
 {
     // NSWindowDelegateMethod
-    NSLog(@"closing window");
-//    [self postRetryAuthNotification];
+    //    NSLog(@"closing window");
+    //    [self postRetryAuthNotification];
 }
+
 /*
- 
  - (void)webView:(WebView *)sender didReceiveServerRedirectForProvisionalLoadForFrame:(WebFrame *)frame
  {
  NSURL *receivedURL = [[[frame provisionalDataSource] request] URL];
  
- NSLog(@"received server redirect: %@", [receivedURL absoluteString]);
+ NSLog(@"-- received server redirect: %@", [receivedURL absoluteString]);
  
- if([[receivedURL absoluteString] hasPrefix: FAKE_CALLBACK_URL_DENIED])
+ if([[receivedURL absoluteString] hasPrefix: CALLBACK_URL_DENIED])
  {
- NSLog(@"User denied verification.");
+ // NSLog(@"User denied verification.");
  
  }
  else
  {
- NSLog(@"server redirecting to somewhere we don't handle yet: %@", [receivedURL absoluteString]);
+ // NSLog(@"server redirecting to somewhere we don't handle yet: %@", [receivedURL absoluteString]);
  }
  
  [merryAuthWindowWindow orderOut: self]; // hides auth window
  }
- 
- - (void)webView:(WebView *)sender willPerformClientRedirectToURL:(NSURL *)URL delay:(NSTimeInterval)seconds fireDate:(NSDate *)date forFrame:(WebFrame *)frame
- {
- 
- // if user clicks NO, this method will be called and frame is redirecting to address http://www.flickr.com/
- 
- NSLog(@"client redirect to url: %@", [URL absoluteString]);
- 
- if([[URL absoluteString] hasPrefix: FAKE_CALLBACK_URL_PASSED])
- {
- NSLog(@"successfully authenticated. now finalizing authentication");
- 
- NSString *oauthVerifier = [MerryUtil queryStringFromURL: URL forKey: @"oauth_verifier"];
- 
- NSLog(@"we got oauth verifier: %@", oauthVerifier);
- 
- [merryAuthenticationService performSelector: @selector(fetchAccessTokenWithOAuthVerifier:) withObject: oauthVerifier]; // calling parent to grab access token
- 
- [merryAuthWindowWebView setFrameLoadDelegate: nil]; // remove all delegates for a clean order out.
- }
- else
- {
- NSLog(@"redirecting to somewhere? %@", [URL absoluteString]);
- }
- 
- [merryAuthWindowWindow orderOut: self];
- }*/
+ */
+- (void)webView:(WebView *)sender willPerformClientRedirectToURL:(NSURL *)URL delay:(NSTimeInterval)seconds fireDate:(NSDate *)date forFrame:(WebFrame *)frame
+{
+    
+//    NSLog(@"client redirect to url: %@", [URL absoluteString]);
+    
+    if([[URL absoluteString] hasPrefix: CALLBACK_URL_PASSED])
+    {
+        [merryAuthWindowWindow orderOut: self]; 
+        // this closes window faster than above didStartProvisionalLoadForFrame:, so we are using it.
+    }
+    
+    // if([[URL absoluteString] hasPrefix: FAKE_CALLBACK_URL_PASSED])
+    // {
+    // NSLog(@"successfully authenticated. now finalizing authentication");
+    // 
+    // NSString *oauthVerifier = [MerryUtil queryStringFromURL: URL forKey: @"oauth_verifier"];
+    // 
+    // NSLog(@"we got oauth verifier: %@", oauthVerifier);
+    // 
+    // [merryAuthenticationService performSelector: @selector(fetchAccessTokenWithOAuthVerifier:) withObject: oauthVerifier]; // calling parent to grab access token
+    // 
+    // [merryAuthWindowWebView setFrameLoadDelegate: nil]; // remove all delegates for a clean order out.
+    // }
+    // else
+    // {
+    // NSLog(@"redirecting to somewhere? %@", [URL absoluteString]);
+    // }
+    // 
+    // [merryAuthWindowWindow orderOut: self];
+}
 
 
 

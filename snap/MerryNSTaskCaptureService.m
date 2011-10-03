@@ -41,7 +41,7 @@
     {
         generalPasteBoardChangeCount = currentGeneralPasteBoardChangeCount;
         
-        NSLog(@"successfully created. now fetching Pasteboard");
+//        NSLog(@"successfully created. now fetching Pasteboard");
         NSImage *capturedImageFromPasteboard = [[NSImage alloc] initWithPasteboard: [NSPasteboard generalPasteboard]];
         NSBitmapImageRep *capturedImageRep = [[capturedImageFromPasteboard representations] objectAtIndex:0];
         NSData *capturedImageData = [capturedImageRep representationUsingType:NSPNGFileType properties:nil];

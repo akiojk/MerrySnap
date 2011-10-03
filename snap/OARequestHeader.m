@@ -97,7 +97,7 @@
 	
 	NSString *oauthHeader = [NSString stringWithFormat:@"OAuth %@", [chunks componentsJoinedByString:@", "]];
     
-    NSLog(@"oauthHeader: %@", oauthHeader);
+//    NSLog(@"oauthHeader: %@", oauthHeader);
     
     return oauthHeader;
 }
