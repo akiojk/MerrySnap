@@ -33,7 +33,13 @@
         [[NSNotificationCenter defaultCenter] addObserver: self selector:@selector(userHasSignedOut) name: NOTIFICATION_LOGGED_OUT  object: nil];
         
         NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSSquareStatusItemLength];
-        [statusItem setImage: [NSImage imageNamed: @"MerryIcon24x24.png"]];
+        NSImage *iconImage = [NSImage imageNamed: @"MerrySnapIcon24x24.png"];
+        [iconImage setSize: NSMakeSize(24, 24)];
+        NSImage *iconImageInv = [NSImage imageNamed: @"MerrySnapIcon24x24i.png"];
+        [iconImageInv setSize: NSMakeSize(24, 24)];
+        
+        [statusItem setImage: iconImage];
+        [statusItem setAlternateImage: iconImageInv];
         [statusItem setMenu: dropDownMainMenu];
         [statusItem setHighlightMode: YES];
         [statusItem retain];

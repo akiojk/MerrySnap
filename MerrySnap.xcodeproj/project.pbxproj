@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2800BADF1437547D00DF68C0 /* MerryIcon24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 2800BADE1437547D00DF68C0 /* MerryIcon24x24.png */; };
 		2811CC68143718DA00F0D15E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C66142DA1B300AED3C4 /* main.m */; };
 		2811CC69143718DA00F0D15E /* snapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C6D142DA1B300AED3C4 /* snapAppDelegate.m */; };
 		2811CC6A143718DA00F0D15E /* MerryCaptureService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C87C7F142DA39400AED3C4 /* MerryCaptureService.m */; };
@@ -53,6 +52,8 @@
 		28AAFF5414381C8500CFC159 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28AAFF5214381C6800CFC159 /* Sparkle.framework */; };
 		28AAFF8C14387FD800CFC159 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AAFF8B14387FD800CFC159 /* Growl-WithInstaller.framework */; };
 		28AAFF8D14387FE700CFC159 /* Growl-WithInstaller.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28AAFF8B14387FD800CFC159 /* Growl-WithInstaller.framework */; };
+		28B0916E1439AF3A003BBF90 /* MerrySnapIcon24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 28B0916D1439AF3A003BBF90 /* MerrySnapIcon24x24.png */; };
+		28B091701439B08F003BBF90 /* MerrySnapIcon24x24i.png in Resources */ = {isa = PBXBuildFile; fileRef = 28B0916F1439B08F003BBF90 /* MerrySnapIcon24x24i.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,7 +73,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2800BADE1437547D00DF68C0 /* MerryIcon24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MerryIcon24x24.png; sourceTree = "<group>"; };
 		28098BE9143693EF00DBF059 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthConsumer.framework; path = Frameworks/OAuthConsumer.framework; sourceTree = "<group>"; };
 		28098BEA143693EF00DBF059 /* YAJL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJL.framework; path = Frameworks/YAJL.framework; sourceTree = "<group>"; };
 		28098BFF1436948200DBF059 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -109,6 +109,8 @@
 		2895380814380DFC00150852 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		28AAFF5214381C6800CFC159 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		28AAFF8B14387FD800CFC159 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Growl-WithInstaller.framework"; path = "Frameworks/Growl-WithInstaller.framework"; sourceTree = "<group>"; };
+		28B0916D1439AF3A003BBF90 /* MerrySnapIcon24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MerrySnapIcon24x24.png; sourceTree = "<group>"; };
+		28B0916F1439B08F003BBF90 /* MerrySnapIcon24x24i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MerrySnapIcon24x24i.png; sourceTree = "<group>"; };
 		28C87C5A142DA1B300AED3C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		28C87C5D142DA1B300AED3C4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		28C87C5E142DA1B300AED3C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -252,7 +254,8 @@
 		289220D214373EFE00774AA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2800BADE1437547D00DF68C0 /* MerryIcon24x24.png */,
+				28B0916D1439AF3A003BBF90 /* MerrySnapIcon24x24.png */,
+				28B0916F1439B08F003BBF90 /* MerrySnapIcon24x24i.png */,
 				28C87C6F142DA1B300AED3C4 /* MainMenu.xib */,
 				28098C38143712A400DBF059 /* MerryNightmare.icns */,
 				28098C231436B0D400DBF059 /* MerrySnapAuthWindow.xib */,
@@ -452,8 +455,9 @@
 				2811CC8C143718DA00F0D15E /* Growl Registration Ticket.growlRegDict in Resources */,
 				2811CC8D143718DA00F0D15E /* MerryNightmare.icns in Resources */,
 				289220DA143743F500774AA7 /* MerryStatusBarMenu.xib in Resources */,
-				2800BADF1437547D00DF68C0 /* MerryIcon24x24.png in Resources */,
 				2895380914380DFC00150852 /* dsa_pub.pem in Resources */,
+				28B0916E1439AF3A003BBF90 /* MerrySnapIcon24x24.png in Resources */,
+				28B091701439B08F003BBF90 /* MerrySnapIcon24x24i.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
